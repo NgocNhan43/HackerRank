@@ -1,4 +1,4 @@
-
+package OOP;
 
 class ProtectedExample {
     protected  String message = "Hello from Protected!";
@@ -45,9 +45,9 @@ public class AccessModifier {
         sb3.eat();
         sb3.displayMessage();
 
-//        ProtectedExample animal = new SubClass();  // Ép kiểu lên: sun -> father
+//        OOP.ProtectedExample animal = new OOP.SubClass();  // Ép kiểu lên: sun -> father
 //
-//        SubClass sb3 = (SubClass)animal;
+//        OOP.SubClass sb3 = (OOP.SubClass)animal;
 //        sb3.eat();
 //        sb3.displayMessage();
     }

@@ -15,7 +15,6 @@ public class devideFor5 {
 
     }
 
-
     public static void findMinMaxArray(int[] array) {
         int max = array[0];
         int min = array[0];

@@ -1,3 +1,5 @@
+package OOP;
+
 class human {
     public int day;
     public int month;
