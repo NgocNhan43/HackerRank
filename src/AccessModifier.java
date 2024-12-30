@@ -2,6 +2,11 @@
 
 class ProtectedExample {
     protected  String message = "Hello from Protected!";
+
+      void eat(){
+        System.out.println("exam father");
+    }
+
 }
 
 class SubClass extends ProtectedExample {
@@ -9,14 +14,41 @@ class SubClass extends ProtectedExample {
         System.out.println(message);
     }
 
-   static void displayMessages() {
+    @Override
+     void eat() {
+        System.out.println("Ayase");
+    }
+
+    static void displayMessages() {
         System.out.println("ahihi");
     }
 }
 
 public class AccessModifier {
     public static void main(String[] args) {
-        SubClass obj = new SubClass();
-        obj.displayMessage(); // Gọi phương thức trong lớp con
+        SubClass sub = new SubClass();
+        sub.displayMessage();
+        SubClass.displayMessages();// Gọi phương thức trong lớp con
+        sub.eat();
+
+        ProtectedExample pe1 = new SubClass();// pé kiểu lên
+        pe1.eat();
+
+        //ép kiểu lên(an toàn) kiểu dữ liệu của con thành kiểu dữ liệu của cha
+        SubClass subb = new SubClass();
+        ProtectedExample pe = subb;
+        pe.eat();
+        // ép kiểu xuống kiểu dữ liệu của cha thành dữ liệu của  father -> sun
+        SubClass animal = new SubClass();  // Ép kiểu lên: sun -> father
+
+        SubClass sb3 = animal;
+        sb3.eat();
+        sb3.displayMessage();
+
+//        ProtectedExample animal = new SubClass();  // Ép kiểu lên: sun -> father
+//
+//        SubClass sb3 = (SubClass)animal;
+//        sb3.eat();
+//        sb3.displayMessage();
     }
-}
+    }

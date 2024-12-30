@@ -1,3 +1,5 @@
+package codeLearn;
+
 import java.util.Scanner;
 
 public class array {

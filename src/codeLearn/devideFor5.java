@@ -1,3 +1,5 @@
+package codeLearn;
+
 public class devideFor5 {
 
     public static void sumDevideFor5(int[] array) {
@@ -58,16 +60,14 @@ public class devideFor5 {
         }
     }
 
-    public static void printArray(int[]array){
-        for (int i = 0; i < array.length; i++){
+    public static void printArray(int[] array) {
+        for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + " ");
 
 
         }
         System.out.println("");
     }
-
-
 
 
     public static void main(String[] args) {
